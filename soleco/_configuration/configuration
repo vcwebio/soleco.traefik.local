@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+DOLLAR='$'
+export SOLECO_MODULE="traefik.g1"

@@ -1,0 +1,33 @@
+##### BEGIN soleco/Dockerfile/image-header #####
+FROM vcwebio/conteco.image.wrapper AS base
+##### END soleco/Dockerfile/image-header #####
+
+##### BEGIN soleco/Dockerfile/conteco #####
+COPY ./soleco/ /soleco/
+RUN rm -rf /conteco/repo
+COPY ./ /conteco/repo/
+##### END soleco/Dockerfile/conteco #####
+
+##### BEGIN image/Dockerfile/build-instructions #####
+##### END image/Dockerfile/build-instructions #####
+
+##### BEGIN soleco/Dockerfile/env-labels-footer #####
+ENV CONTECO_REALM="vcwebio" \
+    CONTECO_ECOSYSTEM="soleco" \
+    CONTECO_TYPE="traefik" \
+    CONTECO_NAME="local" \
+    CONTECO_TAG="v1.0.0" \
+    CONTECO_BASE="image.wrapper" \
+    CONTECO_BUILD="soleco"
+LABEL io.vcweb.schema-version="1.0" \
+      io.vcweb.realm="vcwebio" \
+      io.vcweb.ecosystem="soleco" \
+      io.vcweb.type="traefik" \
+      io.vcweb.name="local" \
+      io.vcweb.tag="v1.0.0" \
+      io.vcweb.base="image.wrapper" \
+      io.vcweb.build="soleco" \
+      io.vcweb.label="traefik.soleco - SolEco" \
+      io.vcweb.description="Simple Traefik solution, providing autodiscovery for solution services." \
+      io.vcweb.docker.cmd.help="docker run vcwebio/soleco.traefik.local --help"
+##### END soleco/Dockerfile/env-labels-footer #####
