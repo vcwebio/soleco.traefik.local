@@ -9,7 +9,7 @@
     type: external
     service: traefik
     area: gateway
-
+# source
 - type: http
   id: internal_traefik_dashboard
   name: Internal Traefik Dashboard
