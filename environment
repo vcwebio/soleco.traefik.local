@@ -5,7 +5,7 @@ export CONTECO_DESCRIPTION="Simple Traefik solution, providing autodiscovery for
 
 export CONTECO_TYPE="traefik"
 export CONTECO_NAME="local"
-export CONTECO_TAG="v1.0.2"
+export CONTECO_TAG="v1.0.3"
 export CONTECO_TAG_TYPE="incremental"
 
 export CONTECO_BASE="image.wrapper"
